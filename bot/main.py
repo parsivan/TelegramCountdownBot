@@ -21,7 +21,7 @@ logging.basicConfig(
 
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await context.bot.send_message(chat_id=update.effective_chat.id, text=f"How can I help You {update.message.chat.first_name}?")
+    await context.bot.send_message(chat_id=update.effective_chat.id, text=f"How can I help you {update.message.chat.first_name}?")
 
 if __name__ == '__main__':
     application = ApplicationBuilder().token(API_KEY).build()
