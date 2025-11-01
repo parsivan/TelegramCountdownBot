@@ -1,5 +1,8 @@
 import os
 import logging
+import asyncio
+import contextlib
+import datetime as dtm  # import timezone, date, datetime, time, timedelta
 from dotenv import load_dotenv
 from telegram import Update
 from telegram.ext import ApplicationBuilder, ContextTypes, CommandHandler
@@ -16,8 +19,9 @@ logging.basicConfig(
 )
 
 
+
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await context.bot.send_message(chat_id=update.effective_chat.id, text="I'm a bot, I'm still in development! i think webhook should work now 🤖 XD 😃")
+    await context.bot.send_message(chat_id=update.effective_chat.id, text=f"How can I help You {update.message.chat.first_name}?")
 
 if __name__ == '__main__':
     application = ApplicationBuilder().token(API_KEY).build()
