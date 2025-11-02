@@ -1,7 +1,7 @@
 import os
 import logging
-import asyncio
-import contextlib
+# import asyncio
+# import contextlib
 
 import datetime as dtm  # import timezone, date, datetime, time, timedelta
 from dotenv import load_dotenv
@@ -21,8 +21,8 @@ logging.basicConfig(
 )
 
 
-
-async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
+async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Respond to /start"""
     await context.bot.send_message(chat_id=update.effective_chat.id, text=f"Hi! How can I help you {update.message.chat.first_name}?")
     keyboard = [
         [
@@ -34,16 +34,19 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     reply_markup = InlineKeyboardMarkup(keyboard)
     await update.message.reply_text("Please choose:", reply_markup=reply_markup)
 
+
 async def echo_time():
+    """print time with the user timezone"""
     ...
 
 
 def main() -> None:
+    """Start the Bot."""
     application = ApplicationBuilder().token(API_KEY).build()
-    
+
     start_handler = CommandHandler('start', start)
     application.add_handler(start_handler)
-    
+
     application.run_polling()
 
 
