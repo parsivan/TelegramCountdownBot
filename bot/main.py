@@ -23,7 +23,8 @@ logging.basicConfig(
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Respond to /start"""
-    await context.bot.send_message(chat_id=update.effective_chat.id, text=f"Hi! How can I help you {update.message.chat.first_name}?")
+    # await context.bot.send_message(chat_id=update.effective_chat.id, text=f"Hi! How can I help you {update.message.chat.first_name}?")
+    await update.message.reply_text(f"Hi! How can I help you {update.message.chat.first_name}?")
     keyboard = [
         [
             InlineKeyboardButton("Get a GF", callback_data="1"),
