@@ -41,13 +41,14 @@ async def echo_time():
 
 
 async def help_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Reply to /help and give documentation for using bot"""
     await update.message.reply_text("/help you can set timezone using /zone and then get your local time using /time ")
+
 
 def main() -> None:
     """Start the Bot."""
     application = ApplicationBuilder().token(API_KEY).build()
 
-    
     application.add_handler(CommandHandler('start', start))
     application.add_handler(CommandHandler('Help', help_handler))
 
