@@ -40,7 +40,7 @@ async def echo_time():
     ...
 
 
-async def help_handler() -> None:
+async def help_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text("/help you can set timezone using /zone and then get your local time using /time ")
 
 def main() -> None:
@@ -48,7 +48,7 @@ def main() -> None:
     application = ApplicationBuilder().token(API_KEY).build()
 
     
-    application.add_handler(CommandHandler('start, start'))
+    application.add_handler(CommandHandler('start', start))
     application.add_handler(CommandHandler('Help', help_handler))
 
     application.run_polling()
