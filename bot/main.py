@@ -40,12 +40,16 @@ async def echo_time():
     ...
 
 
+async def help_handler() -> None:
+    await update.message.reply_text("/help you can set timezone using /zone and then get your local time using /time ")
+
 def main() -> None:
     """Start the Bot."""
     application = ApplicationBuilder().token(API_KEY).build()
 
-    start_handler = CommandHandler('start', start)
-    application.add_handler(start_handler)
+    
+    application.add_handler(CommandHandler('start, start'))
+    application.add_handler(CommandHandler('Help', help_handler))
 
     application.run_polling()
 
