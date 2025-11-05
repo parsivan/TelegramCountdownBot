@@ -1,4 +1,6 @@
 # TODOs:
+- Cleaning up the README.md and adding details to the github page.
+
 ## V 0.1.0
     [x] - Buttons and messages.
     [x] - Time&date library and simple show time feature.
