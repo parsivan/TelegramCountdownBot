@@ -36,9 +36,10 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text("Please choose:", reply_markup=reply_markup)
 
 
-async def echo_time():
-    """print time with the user timezone"""
-    ...
+async def echo_time(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """print current utc time with no formatting"""
+    utc_now = dtm.datetime.now(dtm.UTC)
+    await update.message.reply_text(f"{utc_now}")  # print current utc time
 
 
 async def help_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -52,6 +53,7 @@ def main() -> None:
 
     application.add_handler(CommandHandler('start', start))
     application.add_handler(CommandHandler('Help', help_handler))
+    application.add_handler(CommandHandler('time', echo_time))
 
     application.run_polling()
 
