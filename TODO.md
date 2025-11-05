@@ -3,7 +3,7 @@
     [x] - Buttons and messages.
     [x] - Time&date library and simple show time feature.
 ### V 0.1.1
-    [ ] - Make the current utc time human readabl.
+    [ ] - Make the current utc time human readable.
 ## V 0.2.0
     [ ] - dynamic message to show changing text. (onee message shows ticking time)
     [ ] - Getting input from user in the form of date & time for countdown.
