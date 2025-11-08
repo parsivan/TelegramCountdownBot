@@ -1,6 +1,7 @@
 <p align="center">
-    <h2 align="center">Countdown Bot</h2> 
+    <h2 align="center">Countdown Bot<br>
 <a href="https://t.me/CountdownTimeKeeperBot" target="_blank"><img src="https://img.shields.io/badge/BOT-%2357abe8?style=for-the-badge&logo=Telegram&logoSize=auto&label=Telegram&labelColor=%23007090"></a>
+</h2>
 </p>
 
 ### Gettings Started
