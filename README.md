@@ -1,8 +1,9 @@
 <p align="center">
     <h2 align="center">Countdown Bot</h2> 
 </p>
+<!-- badges: start -->
 ![Static Badge](https://img.shields.io/badge/BOT-%2357abe8?style=for-the-badge&logo=Telegram&logoSize=auto&label=Telegram&labelColor=%23007090&link=https%3A%2F%2Ft.me%2FCountdownTimeKeeperBot)
-
+<!-- badges: end -->
 
 ### Gettings Started
 Clone this repo.
