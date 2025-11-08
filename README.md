@@ -1,9 +1,7 @@
 <p align="center">
     <h2 align="center">Countdown Bot</h2> 
+<a href="https://t.me/CountdownTimeKeeperBot" target="_blank"><img src="https://img.shields.io/badge/BOT-%2357abe8?style=for-the-badge&logo=Telegram&logoSize=auto&label=Telegram&labelColor=%23007090"></a>
 </p>
-<!-- badges: start -->
-[![Telegram](https://img.shields.io/badge/BOT-%2357abe8?style=for-the-badge&logo=Telegram&logoSize=auto&label=Telegram&labelColor=%23007090)](https://t.me/CountdownTimeKeeperBot)
-<!-- badges: end -->
 
 ### Gettings Started
 Clone this repo.
