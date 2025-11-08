@@ -8,8 +8,22 @@ authors = [
   {name = "Parsa Mahmoodi", email = "parsa.mahmoodi81@gmail.com" }
 ]
 license = "GPL-3.0-only"
-License-File= "LICENSE"
+License-File = "LICENSE"
 dependencies = [
-    "python-dotenv>=1.2.1",
-    "python-telegram-bot>=22.5",
+  "python-dotenv>=1.2.1",
+  "python-telegram-bot>=22.5",
+]
+
+[tool.ruff]
+lint.extend-select = ["ALL"]
+lint.ignore = [
+  "T201",  # flake8-print - no print in production code
+  "E501",  # Pycodestyle - line too long
+  "D1",  # Pycodestyle - missing docstring in public module, class, or funciton.
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.0",
+    "ruff>=0.14.4",
 ]
