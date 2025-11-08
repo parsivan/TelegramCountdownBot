@@ -14,16 +14,16 @@ dependencies = [
   "python-telegram-bot>=22.5",
 ]
 
+[dependency-groups]
+dev = [
+    "pytest>=9.0.0",
+    "ruff>=0.14.4",
+]
+
 [tool.ruff]
 lint.extend-select = ["ALL"]
 lint.ignore = [
   "T201",  # flake8-print - no print in production code
   "E501",  # Pycodestyle - line too long
   "D1",  # Pycodestyle - missing docstring in public module, class, or funciton.
-]
-
-[dependency-groups]
-dev = [
-    "pytest>=9.0.0",
-    "ruff>=0.14.4",
 ]
